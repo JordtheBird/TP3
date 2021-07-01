@@ -75,7 +75,7 @@ if __name__ == "__main__":
             
             selection_ids = list(set(selection_ids).intersection(temp))
 
-        print(mediatheque.reduire_liste_des_shows(selection_ids))
+        mediatheque.reduire_liste_des_shows(selection_ids)
 
         print(f"Salut {utilisateur.nom.title()}! Tu as accès à {len(mediatheque)} films et séries télés.")
 
