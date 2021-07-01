@@ -5,6 +5,9 @@ from utilisateur import AnnuaireUtilisateur
 #agabvvsvsvs
 #sgagrhaamn
 
+# sadasdasdasdasd
+# asdasdasdasdasda
+# dasdasdasdasdasdas
 def afficher_menu_accueil_et_choisir_action():
     """
     Fonction permettant d'afficher le menu d'accueil, les choix disponibles
