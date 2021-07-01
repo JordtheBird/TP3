@@ -1,13 +1,7 @@
 from mediatheque import Mediatheque
 from show import Show
 from utilisateur import AnnuaireUtilisateur
-#adfafafaffa
-#agabvvsvsvs
-#sgagrhaamn
 
-# sadasdasdasdasd
-# asdasdasdasdasda
-# dasdasdasdasdasdas
 def afficher_menu_accueil_et_choisir_action():
     """
     Fonction permettant d'afficher le menu d'accueil, les choix disponibles
@@ -78,9 +72,10 @@ if __name__ == "__main__":
         selection_ids = mediatheque.filtrer_ids_sur_age(utilisateur.age)
         if utilisateur.abonnement == 1:
             temp = mediatheque.filtrer_ids_sur_attribut_par_inclusion_de_liste_de_string("pays", utilisateur.pays)
+            
             selection_ids = list(set(selection_ids).intersection(temp))
 
-        mediatheque.reduire_liste_des_shows(selection_ids)
+        print(mediatheque.reduire_liste_des_shows(selection_ids))
 
         print(f"Salut {utilisateur.nom.title()}! Tu as accès à {len(mediatheque)} films et séries télés.")
 
@@ -136,17 +131,16 @@ if __name__ == "__main__":
 
             elif choix_menu == 4:  # Afficher les films ou séries les plus récents
                 mediatheque.afficher_avec_pagination(
-                    nombre_de_shows_par_page=10, attribut_pour_trier="date_ajout"
-                )
+                    selection_ids, nombre_de_shows_par_page=10, attribut_pour_trier="date_ajout" )
 
             elif choix_menu == 5:  # Afficher les films ou séries les plus populaires
                 mediatheque.afficher_avec_pagination(
-                    nombre_de_shows_par_page=10, attribut_pour_trier="popularite"
+                    selection_ids, nombre_de_shows_par_page=10, attribut_pour_trier="popularite"
                 )
 
             elif choix_menu == 6:  # Afficher les films ou séries les plus mieux évalués
                 mediatheque.afficher_avec_pagination(
-                    nombre_de_shows_par_page=10, attribut_pour_trier="note"
+                    selection_ids, nombre_de_shows_par_page=10, attribut_pour_trier="note"
                 )
 
             else:

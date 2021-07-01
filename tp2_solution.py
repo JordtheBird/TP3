@@ -268,7 +268,7 @@ def lister_valeurs_uniques_par_attribut(mediatheque, attribut):
 
 
 if __name__ == '__main__':
-    fichier_des_shows = "ulfix-small.txt"
+    fichier_des_shows = "ulflix.txt"
     mediatheque_globale = charger_mediatheque(fichier_des_shows)
 
     print("#"*80, "###{:^74s}###".format("Bienvenue dans ULFlix"), "#"*80, sep="\n")

@@ -1,4 +1,5 @@
 import math
+from utilisateur import Utilisateur
 
 from show import Show
 
@@ -55,7 +56,7 @@ class Mediatheque:
         les identifiants ne font pas partie de la liste des identifiants à 
         garder (liste fournie par le paramètre identifiants_a_garder).
 
-        Pour la suppresion, cela ressemblera à quelque chose comme:
+        Pour la suppression, cela ressemblera à quelque chose comme:
         del self.shows[show_id]
         (À adapter bien évidemment!)
 
@@ -63,7 +64,9 @@ class Mediatheque:
             identifiants_a_garder (list): Liste des identifiants des shows
             à ne pas supprimer de la médiathèque.
         """
-        # À Compléter
+        show_a_enlever = [show_id for show_id in self.shows if show_id not in identifiants_a_garder]
+        for show_id in show_a_enlever:
+            del self.shows[show_id]        
 
     def filtrer_ids_sur_attribut_par_inclusion_de_string(self, attribut, valeur):
         """
@@ -113,7 +116,8 @@ class Mediatheque:
         Returns:
             list: Liste des show_ids respectant la limite d'âge.
         """
-        # À Compléter
+        return [show_id for show_id in self.shows if self.shows[show_id].age_minimum_requis <= age_utilisateur]
+
 
     def trier_ids_par_attribut(self, show_ids, attribut):
         """
@@ -167,3 +171,21 @@ class Mediatheque:
             attribut_pour_trier (str): Attribut de tri.
         """
         # À Compléter
+        show_ids = self.trier_ids_par_attribut(identifiants, attribut_pour_trier)
+        nb_pages = int(math.ceil(len(show_ids) / nombre_de_shows_par_page))
+        i = 0
+        while i < nb_pages:
+            print(f"Page: {i+1} sur {nb_pages}")
+            for j in range(i*nombre_de_shows_par_page, min(len(show_ids), (i+1)*nombre_de_shows_par_page)):
+                print((self.shows[show_ids[j]]))
+            print(f"Page: {i+1} sur {nb_pages}")
+
+            choix = input("Entrer s [page suivante], p [page précédente], q [quitter]: ")
+            if choix.lower() == "s":
+                if i < nb_pages - 1:
+                    i += 1
+            elif choix.lower() == "p":
+                if i > 0:
+                    i -= 1
+            else:
+                break

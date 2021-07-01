@@ -60,7 +60,7 @@ class Show:
         Returns:
             Show: Un objet Show représentant le show.
         """
-        # À Compléter
+        
 
         res = {cle: valeur for cle, valeur in zip(ligne_des_titres.split("|"), ligne.split("|"))}
         date = res["date_ajout"] if (res["date_ajout"] != "") else "January 1, 2000"
@@ -83,8 +83,6 @@ class Show:
         )
 
             
-
-
     def __str__(self):
         """
         Cette méthode vous permet de faire print(show) pour un objet de type Show
@@ -110,4 +108,4 @@ class Show:
         Returns:
             int: Âge minimum requis pour le show.
         """
-        # À Compléter
+        return Show.LIMITE_MINIMUM_D_AGE_PAR_CLASSEMENT[self.classement]
