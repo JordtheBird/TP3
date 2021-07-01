@@ -1,8 +1,9 @@
 from mediatheque import Mediatheque
 from show import Show
 from utilisateur import AnnuaireUtilisateur
-
-
+# sadasdasdasdasd
+# asdasdasdasdasda
+# dasdasdasdasdasdas
 def afficher_menu_accueil_et_choisir_action():
     """
     Fonction permettant d'afficher le menu d'accueil, les choix disponibles
