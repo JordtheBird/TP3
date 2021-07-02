@@ -105,7 +105,7 @@ class AnnuaireUtilisateur:
 
         mot_de_passe = None
         while mot_de_passe is None:
-            mot_de_passe = getpass("Veuillez entrer votre mot de passe (min 6 caractères): ")
+            mot_de_passe = input("Veuillez entrer votre mot de passe (min 6 caractères): ")
             if len(mot_de_passe) < 6 or mot_de_passe.isspace():
                 print("Le mot de passe doit faire au minimum 6 caractères.")
                 mot_de_passe = None
