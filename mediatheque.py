@@ -170,7 +170,6 @@ class Mediatheque:
 
             attribut_pour_trier (str): Attribut de tri.
         """
-        
         show_ids = self.trier_ids_par_attribut(identifiants, attribut_pour_trier)
         nb_pages = int(math.ceil(len(show_ids) / nombre_de_shows_par_page))
         i = 0
