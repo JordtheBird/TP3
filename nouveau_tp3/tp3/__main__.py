@@ -131,8 +131,12 @@ if __name__ == "__main__":
 
             elif choix_menu == 4:  # Afficher les films ou séries les plus récents
                 mediatheque.afficher_avec_pagination(
+<<<<<<< HEAD:nouveau_tp3/tp3/__main__.py
                     nombre_de_shows_par_page=10, attribut_pour_trier="date_ajout"
                 )
+=======
+                    nombre_de_shows_par_page=10, attribut_pour_trier="date_ajout" )
+>>>>>>> master:__main__.py
 
             elif choix_menu == 5:  # Afficher les films ou séries les plus populaires
                 mediatheque.afficher_avec_pagination(

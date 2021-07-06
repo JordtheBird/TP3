@@ -44,7 +44,7 @@ class Show:
         self.duree = duree
         self.categories = categories
 
-    @classmethod
+    @classmethod # on peut appeler sur la classe sans créer d'objet
     def creer_show_via_ligne_et_ligne_des_titres(cls, ligne, ligne_des_titres):
         """
         Méthode permettant de convertir une chaîne de caractères représentant un show
@@ -63,11 +63,19 @@ class Show:
         """
         res = {cle: valeur for cle, valeur in zip(ligne_des_titres.split("|"), ligne.split("|"))}
         date = res["date_ajout"] if (res["date_ajout"] != "") else "January 1, 2000"
+<<<<<<< HEAD:nouveau_tp3/tp3/show.py
         return Show(
             res["show_id"],
             res["titre"],
             res["description"],
             res["langue"],
+=======
+        return cls(
+            res["show_id"], 
+            res["titre"], 
+            res["description"], 
+            res["langue"], 
+>>>>>>> master:show.py
             float(res["popularite"]),
             float(res["note"]),
             res["type"],
