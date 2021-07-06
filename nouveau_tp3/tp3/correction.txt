@@ -1,0 +1,45 @@
+Prénom et Nom de l'étudiant 1:
+Numéro de dossier (NI) de l'étudiant 1:
+
+Prénom et Nom de l'étudiant 2 (optionnel):
+Numéro de dossier (NI) de l'étudiant 2 (optionnel):
+
+Temps de réalisation:
+
+
+Fonctionnalités
+---------------
+/3 : Méthode Show.creer_show_via_ligne_et_ligne_des_titres()
+     Commentaires:
+
+/2 : Méthode Show.age_minimum_requis()
+     Commentaires:
+
+/3 : Méthode Mediatheque.filtrer_ids_sur_age()
+     Commentaires:
+
+/3 : Méthode Mediatheque.reduire_liste_des_shows()
+     Commentaires:
+
+/4 : Méthode Mediatheque.afficher_avec_pagination()
+     Commentaires:
+
+/3 : Méthode AnnuaireUtilisateur.authentifier()
+     Commentaires:
+
+/2 : Qualité du code (noms de variables, style, commentaires, documentation)
+     Commentaires :
+
+
+
+Pénalités pour non-respect des consignes
+----------------------------------------
+
+
+
+Autres commentaires du correcteur
+---------------------------------
+
+
+
+Total: /20
